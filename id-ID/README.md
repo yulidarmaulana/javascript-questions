@@ -91,9 +91,9 @@ for (let i = 0; i < 3; i++) {
 
 #### Jawaban: C
 
-Because of the event queue in JavaScript, the `setTimeout` callback function is called _after_ the loop has been executed. Since the variable `i` in the first loop was declared using the `var` keyword, this value was global. During the loop, we incremented the value of `i` by `1` each time, using the unary operator `++`. By the time the `setTimeout` callback function was invoked, `i` was equal to `3` in the first example.
+Karena antrean peristiwa di JavaScript, fungsi callback `setTimeout` disebut _after_ loop telah dijalankan. Karena variabel `i` di loop pertama dideklarasikan menggunakan kata kunci` var`, nilai ini adalah global. Selama loop, kami menambah nilai `i` sebesar` 1` setiap kali, menggunakan operator unary `++`. Pada saat fungsi callback `setTimeout` dipanggil,` i` sama dengan `3` di contoh pertama.
 
-In the second loop, the variable `i` was declared using the `let` keyword: variables declared with the `let` (and `const`) keyword are block-scoped (a block is anything between `{ }`). During each iteration, `i` will have a new value, and each value is scoped inside the loop.
+Pada perulangan kedua, variabel `i` dideklarasikan menggunakan kata kunci` let`: variabel yang dideklarasikan dengan kata kunci `let` (dan` const`) memiliki cakupan blok (blok adalah apa saja di antara `{}`). Selama setiap iterasi, `i` akan memiliki nilai baru, dan setiap nilai dicakup di dalam loop.
 
 </p>
 </details>
@@ -125,11 +125,11 @@ console.log(shape.perimeter());
 
 #### Jawaban: B
 
-Note that the value of `diameter` is a regular function, whereas the value of `perimeter` is an arrow function.
+Perhatikan bahwa nilai `diameter` adalah fungsi biasa, sedangkan nilai` perimeter` adalah fungsi panah.
 
-With arrow functions, the `this` keyword refers to its current surrounding scope, unlike regular functions! This means that when we call `perimeter`, it doesn't refer to the shape object, but to its surrounding scope (window for example).
+Dengan fungsi panah, kata kunci `this` merujuk ke cakupan sekitarnya saat ini, tidak seperti fungsi biasa! Ini berarti bahwa ketika kita memanggil `perimeter`, itu tidak mengacu pada objek bentuk, tetapi pada lingkup sekitarnya (window for example).
 
-There is no value `radius` on that object, which returns `undefined`.
+Tidak ada nilai `radius` pada objek itu, yang mengembalikan` tidak ditentukan`.
 
 </p>
 </details>
@@ -152,16 +152,16 @@ There is no value `radius` on that object, which returns `undefined`.
 
 #### Jawaban: A
 
-The unary plus tries to convert an operand to a number. `true` is `1`, and `false` is `0`.
+Unary plus mencoba mengonversi operan menjadi angka. `true` adalah` 1`, dan `false` adalah` 0`.
 
-The string `'Lydia'` is a truthy value. What we're actually asking, is "is this truthy value falsy?". This returns `false`.
+String "'Lydia'` adalah nilai yang benar. Apa yang sebenarnya kami tanyakan adalah "apakah nilai kebenaran ini salah?". Ini mengembalikan `false`.
 
 </p>
 </details>
 
 ---
 
-###### 5. Which one is true?
+###### 5. mana yang benar?
 
 ```javascript
 const bird = {
@@ -184,13 +184,13 @@ const mouse = {
 
 #### Jawaban: A
 
-In JavaScript, all object keys are strings (unless it's a Symbol). Even though we might not _type_ them as strings, they are always converted into strings under the hood.
+Dalam JavaScript, semua kunci objek adalah string (kecuali jika itu Simbol). Meskipun kita mungkin tidak _type_ mereka sebagai string, mereka selalu diubah menjadi string di bawah tenda.
 
-JavaScript interprets (or unboxes) statements. When we use bracket notation, it sees the first opening bracket `[` and keeps going until it finds the closing bracket `]`. Only then, it will evaluate the statement.
+JavaScript menginterpretasikan (atau membuka kotak) pernyataan. Saat kita menggunakan notasi kurung siku, ia melihat kurung buka pertama `[` dan terus berjalan sampai menemukan kurung tutup `]`. Baru setelah itu, itu akan mengevaluasi pernyataan itu.
 
-`mouse[bird.size]`: First it evaluates `bird.size`, which is `"small"`. `mouse["small"]` returns `true`
+`mouse [bird.size]`: Pertama, ia mengevaluasi `bird.size`, yang mana` "small" `. `mouse [" small "]` mengembalikan `true`
 
-However, with dot notation, this doesn't happen. `mouse` does not have a key called `bird`, which means that `mouse.bird` is `undefined`. Then, we ask for the `size` using dot notation: `mouse.bird.size`. Since `mouse.bird` is `undefined`, we're actually asking `undefined.size`. This isn't valid, and will throw an error similar to `Cannot read property "size" of undefined`.
+Namun, dengan notasi titik, ini tidak terjadi. `mouse` tidak memiliki kunci bernama` bird`, yang berarti `mouse.bird` adalah` undefined`. Kemudian, kami meminta `ukuran` menggunakan notasi titik:` mouse.bird.size`. Karena `mouse.bird` adalah` undefined`, kami sebenarnya menanyakan `undefined.size`. Ini tidak valid, dan akan memunculkan kesalahan yang mirip dengan `Tidak dapat membaca properti" ukuran "dari tidak ditentukan`.
 
 </p>
 </details>
