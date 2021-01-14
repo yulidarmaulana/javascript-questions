@@ -219,13 +219,13 @@ console.log(d.greeting);
 
 #### Jawaban: A
 
-In JavaScript, all objects interact by _reference_ when setting them equal to each other.
+Dalam JavaScript, semua objek berinteraksi dengan _reference_ saat menyetelnya agar sama satu sama lain.
 
-First, variable `c` holds a value to an object. Later, we assign `d` with the same reference that `c` has to the object.
+Pertama, variabel `c` menyimpan nilai ke sebuah objek. Nanti, kita menetapkan `d` dengan referensi yang sama yang dimiliki` c` ke objek.
 
 <img src="https://i.imgur.com/ko5k0fs.png" width="200">
 
-When you change one object, you change all of them.
+Saat Anda mengubah satu objek, Anda mengubah semuanya.
 
 </p>
 </details>
@@ -254,11 +254,11 @@ console.log(b === c);
 
 #### Jawaban: C
 
-`new Number()` is a built-in function constructor. Although it looks like a number, it's not really a number: it has a bunch of extra features and is an object.
+`new Number ()` adalah konstruktor fungsi bawaan. Meskipun terlihat seperti angka, sebenarnya ini bukan angka: ia memiliki banyak fitur tambahan dan merupakan objek.
 
-When we use the `==` operator, it only checks whether it has the same _value_. They both have the value of `3`, so it returns `true`.
+Saat kita menggunakan operator `==`, ini hanya memeriksa apakah ia memiliki nilai yang sama. Keduanya memiliki nilai `3`, sehingga mengembalikan` true`.
 
-However, when we use the `===` operator, both value _and_ type should be the same. It's not: `new Number()` is not a number, it's an **object**. Both return `false.`
+Namun, saat kita menggunakan operator `===`, kedua nilai _and_ type harus sama. Bukan: `new Number ()` bukan angka, itu ** objek **. Keduanya mengembalikan `false.`
 
 </p>
 </details>
@@ -293,7 +293,7 @@ console.log(freddie.colorChange('orange'));
 
 #### Jawaban: D
 
-The `colorChange` function is static. Static methods are designed to live only on the constructor in which they are created, and cannot be passed down to any children. Since `freddie` is a child, the function is not passed down, and not available on the `freddie` instance: a `TypeError` is thrown.
+Fungsi `colorChange` bersifat statis. Metode statis dirancang untuk hidup hanya pada konstruktor tempat metode tersebut dibuat, dan tidak dapat diturunkan ke turunan mana pun. Karena `freddie` adalah anak, fungsinya tidak diturunkan, dan tidak tersedia pada instance` freddie`: `TypeError` dilempar.
 
 </p>
 </details>
@@ -317,9 +317,9 @@ console.log(greetign);
 
 #### Jawaban: A
 
-It logs the object, because we just created an empty object on the global object! When we mistyped `greeting` as `greetign`, the JS interpreter actually saw this as `global.greetign = {}` (or `window.greetign = {}` in a browser).
+Ini mencatat objek, karena kita baru saja membuat objek kosong di objek global! Saat kita salah mengetik `salam` sebagai` greetign`, penerjemah JS sebenarnya melihat ini sebagai `global.greetign = {}` (atau `window.greetign = {}` di browser).
 
-In order to avoid this, we can use `"use strict"`. This makes sure that you have declared a variable before setting it equal to anything.
+Untuk menghindari hal ini, kita bisa menggunakan `" use strict "`. Ini memastikan bahwa Anda telah mendeklarasikan variabel sebelum menetapkannya sama dengan apa pun.
 
 </p>
 </details>
@@ -346,9 +346,9 @@ bark.animal = 'dog';
 
 #### Jawaban: A
 
-This is possible in JavaScript, because functions are objects! (Everything besides primitive types are objects)
+Ini dimungkinkan dalam JavaScript, karena fungsi adalah objek! (Segala sesuatu selain tipe primitif adalah objek)
 
-A function is a special type of object. The code you write yourself isn't the actual function. The function is an object with properties. This property is invocable.
+Fungsi adalah jenis objek khusus. Kode yang Anda tulis sendiri bukanlah fungsi sebenarnya. Fungsinya adalah objek dengan properti. Properti ini tidak dapat dipanggil.
 
 </p>
 </details>
